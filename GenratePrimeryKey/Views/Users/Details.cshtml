@@ -1,0 +1,55 @@
+﻿@model GenratePrimeryKey.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+    @*header*@
+    <div class="row MvcView-header">
+        <div class="col d-none d-sm-block">
+            <h2 class="MvcView-Title px-2">جزئیات ....</h2>
+        </div>
+        <div class="col-auto text-end">
+            @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn-back" })
+        </div>
+    </div>
+    @*main*@
+<div class="MvcView-Details-Delete">
+
+            <div class="header-dd">
+                @Html.DisplayNameFor(model => model.UserName)
+            </div>
+            <div class="body-dd">
+               @Html.DisplayFor(model => model.UserName)
+            </div>
+            <div class="header-dd">
+                @Html.DisplayNameFor(model => model.UserEmail)
+            </div>
+            <div class="body-dd">
+               @Html.DisplayFor(model => model.UserEmail)
+            </div>
+            <div class="header-dd">
+                @Html.DisplayNameFor(model => model.UserPassword)
+            </div>
+            <div class="body-dd">
+               @Html.DisplayFor(model => model.UserPassword)
+            </div>
+
+
+</div>
+<p class="text-center mt-3">
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.UserId }, new {@class= "btn-save" }) 
+</p>
+@section Style{
+    @*My Css Code*@
+}
+@section Script{
+    <script>
+        @*for hover Right navbar slider *@
+        $(document).ready(function () {
+            $('#dashboard').addClass('active');
+        });
+    </script>
+}
+
+
+
